@@ -14,9 +14,11 @@ static void Gen_codigo_expresion(Expresion *expr) {
       switch (expr->oper) {
         case '+':
           printf("ADD\n");
+          printf("%d\n",expr->izquierda->valor + expr->derecha->valor);
           break;
-        case '-':
+        case '*':
           printf("MULT\n");
+          printf("%d\n",expr->izquierda->valor * expr->derecha->valor);
           break;
       }
       break;
